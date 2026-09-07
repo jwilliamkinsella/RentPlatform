@@ -1,0 +1,293 @@
+/* src/pages/TenantPayRent.css */
+
+/* ── Background wrapper (matches tenant dashboard) ── */
+.pay-rent-bg-wrap {
+  min-height: 100vh;
+  background: url("/images/dashboard-bg.png") center/cover no-repeat;
+  position: relative;
+}
+
+.pay-rent-bg-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.pay-rent-bg-wrap > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header bar ── */
+.pay-rent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e2a5a;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.pay-rent-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.back-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Body ── */
+.pay-rent-body {
+  max-width: 960px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.pay-rent-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+/* ── Cards ── */
+.pay-info-card,
+.pay-history-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e2a5a;
+}
+
+/* ── Info grid ── */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 3rem;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+}
+
+.info-value {
+  display: block;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.info-value.rent-amount {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.card-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1.25rem 0;
+}
+
+/* ── Due-date countdown banner ── */
+.due-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  background: #eff6ff;
+  border-left: 4px solid #3b82f6;
+  color: #1e3a8a;
+}
+
+.due-banner.urgent {
+  background: #fef3c7;
+  border-left-color: #f59e0b;
+  color: #92400e;
+}
+
+.due-banner.paid {
+  background: #ecfdf5;
+  border-left-color: #10b981;
+  color: #065f46;
+}
+
+.due-banner.open {
+  background: #eff6ff;
+  border-left-color: #3b82f6;
+  color: #1e3a8a;
+}
+
+.due-banner.locked {
+  background: #f3f4f6;
+  border-left-color: #9ca3af;
+  color: #4b5563;
+}
+
+.due-icon {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.due-subtext {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin-top: 0.15rem;
+  display: inline-block;
+}
+
+/* ── Pay button ── */
+.pay-btn {
+  display: inline-block;
+  background: #4338ca;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pay-btn:hover:not(:disabled) {
+  background: #3730a3;
+}
+
+.pay-btn:disabled,
+.pay-btn.disabled-locked {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.pay-btn.disabled-paid {
+  background: #10b981;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.stripe-note {
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* ── Payment History table ── */
+.no-history {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.history-table-wrap {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.history-table thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.history-table tbody td {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #111827;
+}
+
+.amount-cell {
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-badge.succeeded {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.other {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.history-table a {
+  color: #4338ca;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.history-table a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .pay-info-card,
+  .pay-history-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .pay-rent-header {
+    padding: 0.75rem 1rem;
+  }
+}

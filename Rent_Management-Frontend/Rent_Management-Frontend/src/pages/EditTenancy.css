@@ -1,0 +1,92 @@
+.edit-tenancy-page {
+  padding: 2rem 3rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-tenancy-form {
+  margin-top: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+.edit-tenancy-form input,
+.edit-tenancy-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.edit-tenancy-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.edit-tenancy-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.save-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #1e40af;
+}
+
+.back-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #eff6ff;
+}
+
+.message.success {
+  color: green;
+  margin-top: 1rem;
+}
+
+.message.error {
+  color: red;
+  margin-top: 1rem;
+}

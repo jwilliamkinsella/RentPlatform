@@ -1,0 +1,62 @@
+.view-tenants-page {
+  padding: 2rem;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.view-tenants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.view-tenants-header button {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.view-tenants-header button:hover {
+  background: #eff6ff;
+}
+
+.tenant-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tenant-table th,
+.tenant-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tenant-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.tenant-table tr:hover {
+  background: #f9fafb;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}

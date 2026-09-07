@@ -1,0 +1,205 @@
+/* src/pages/LandlordPayments.css */
+
+/* ── Background (matches landlord dashboard) ── */
+.lp-bg-wrap {
+  min-height: 100vh;
+  background: url("/images/dashboard-bg.png") center/cover no-repeat;
+  position: relative;
+}
+
+.lp-bg-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.lp-bg-wrap > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.lp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #032668;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.lp-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.lp-address {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.lp-back-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.lp-back-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Body ── */
+.lp-body {
+  max-width: 1060px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.lp-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.lp-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+/* ── Summary card ── */
+.lp-summary-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.lp-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+}
+
+.lp-value {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.lp-value.lp-amount {
+  color: #065f46;
+}
+
+/* ── Table card ── */
+.lp-table-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.lp-card-title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e2a5a;
+}
+
+.lp-empty {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.lp-table-wrap {
+  overflow-x: auto;
+}
+
+.lp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.lp-table thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.lp-table tbody td {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #111827;
+}
+
+.lp-amount-cell {
+  font-weight: 600;
+}
+
+.lp-status {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.lp-succeeded {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.lp-other {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.lp-table a {
+  color: #032668;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lp-table a:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .lp-summary-card {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .lp-table-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .lp-header {
+    padding: 0.75rem 1rem;
+  }
+}

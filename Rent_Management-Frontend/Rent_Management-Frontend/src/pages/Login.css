@@ -1,0 +1,38 @@
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.login-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/images/login-bg.png") center/cover no-repeat;
+  transform: scale(1.05);
+  z-index: 0;
+  display: flex;
+}
+
+.login-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.01);
+  z-index: 0;
+}
+
+/* center everything */
+.login-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* overrides PageContainer margin: 8% auto */
+.login-card-wrap > div {
+  margin: 0 !important;
+}

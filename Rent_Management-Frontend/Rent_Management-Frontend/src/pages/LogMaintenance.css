@@ -1,0 +1,254 @@
+/* src/pages/LogMaintenance.css */
+
+.maint-bg-wrap {
+  min-height: 100vh;
+  background: url("/images/dashboard-bg.png") center/cover no-repeat;
+  position: relative;
+}
+
+.maint-bg-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.maint-bg-wrap > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.maint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e2a5a;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.maint-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.maint-back-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.maint-back-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Body ── */
+.maint-body {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem 2rem;
+}
+
+/* ── Cards ── */
+.maint-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.maint-card-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e2a5a;
+}
+
+.maint-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0 0 1.25rem;
+}
+
+/* ── Message ── */
+.maint-msg {
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+
+.maint-msg.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.maint-msg.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #dc2626;
+}
+
+/* ── Form ── */
+.maint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.maint-form label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #374151;
+  margin-top: 0.5rem;
+}
+
+.maint-form select,
+.maint-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #111827;
+  background: #fff;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.maint-form select:focus,
+.maint-form textarea:focus {
+  outline: none;
+  border-color: #4338ca;
+  box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.15);
+}
+
+.maint-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.maint-submit-btn {
+  margin-top: 0.75rem;
+  display: inline-block;
+  background: #4338ca;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.maint-submit-btn:hover:not(:disabled) {
+  background: #3730a3;
+}
+
+.maint-submit-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ── Ticket table ── */
+.maint-loading,
+.maint-empty {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.maint-table-wrap {
+  overflow-x: auto;
+}
+
+.maint-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.maint-table thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.maint-table tbody td {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #111827;
+}
+
+.maint-desc-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Status badges ── */
+.maint-status {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.maint-status.open {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.maint-status.in_progress,
+.maint-status.in-progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.maint-status.resolved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.maint-status.closed {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .maint-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .maint-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .maint-desc-cell {
+    max-width: 150px;
+  }
+}

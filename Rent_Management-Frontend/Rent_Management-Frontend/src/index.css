@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #a9b3be;
+  --secondary-color: #f5f9ff;
+  --text-color: #333;
+  --border-radius: 8px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}

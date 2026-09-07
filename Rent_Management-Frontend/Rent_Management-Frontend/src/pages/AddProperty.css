@@ -1,0 +1,73 @@
+.add-property-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  color: #111827;
+  padding: 2rem 4rem;
+}
+
+.dashboard-header {
+  background: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-property-content {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.property-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.property-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.property-form input,
+.property-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.property-form input:focus,
+.property-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.msg-success {
+  color: green;
+  margin-top: 1rem;
+}
+
+.msg-error {
+  color: red;
+  margin-top: 1rem;
+}
