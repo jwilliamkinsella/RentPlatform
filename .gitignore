@@ -6,6 +6,9 @@
 # Dependencies
 node_modules/
 
+# Archives
+*.zip
+
 # Build output
 dist/
 build/
