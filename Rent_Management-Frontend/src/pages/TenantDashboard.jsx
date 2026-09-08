@@ -16,7 +16,7 @@ export default function TenantDashboard() {
   const handleLogout = () => {
     localStorage.removeItem("token"); // removes the token from the storage if the object exists this ensures the token cannot be retrived and used to login using the bearer token
     localStorage.removeItem("user"); // removes stored user object to fully clear session
-    navigate("/");
+    navigate("/login");
   };
 
   // Load tenant's tenancy data

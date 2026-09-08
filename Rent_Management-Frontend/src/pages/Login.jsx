@@ -1,7 +1,7 @@
 import { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import PageContainer from "../components/PageContainer";
+import Navbar from "../components/Navbar";
 import "./Login.css";
 import { api } from "../api/client";
 
@@ -29,86 +29,68 @@ export default function Login() {
       setError(err.response?.data?.message || "Login failed");
     }
   };
-//Wrapped the page in the class for login page to allow me to use the generated images for the background 
-  return (
-    <div className="login-page"> 
-      <div className="login-bg" />
 
+  return (
+    <>
+      <Navbar />
+      <div className="login-page">
       <div className="login-content">
-      <PageContainer title="Login" style={{ margin: 0 }}>
+      <PageContainer title="Login">
+          <p className="login-subtitle">
+            Sign in to manage your properties and tenancies.
+          </p>
+
           <form
             onSubmit={handleLogin}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
+            className="login-form"
           >
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              style={{
-                width: "90%",
-                padding: "12px",
-                marginBottom: "15px",
-                borderRadius: "6px",
-                border: "1px solid #ccc",
-                fontSize: "15px",
-                outlineColor: "var(--primary-color)",
-              }}
-            />
+            <div className="login-field">
+              <label htmlFor="login-email" className="login-label">
+                Email address
+              </label>
+              <input
+                id="login-email"
+                type="email"
+                placeholder="you@example.com"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="login-input"
+              />
+            </div>
 
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              style={{
-                width: "90%",
-                padding: "12px",
-                marginBottom: "20px",
-                borderRadius: "6px",
-                border: "1px solid #f8f5f5e2",
-                fontSize: "15px",
-                outlineColor: "var(--primary-color)",
-              }}
-            />
+            <div className="login-field">
+              <label htmlFor="login-password" className="login-label">
+                Password
+              </label>
+              <input
+                id="login-password"
+                type="password"
+                placeholder="Enter your password"
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                className="login-input"
+              />
+            </div>
 
             <button
               type="submit"
-              style={{
-                width: "95%",
-                padding: "12px",
-                backgroundColor: "#017444d5",
-                color: "#ffffff",
-                border: "none",
-                borderRadius: "var(--border-radius)",
-                cursor: "pointer",
-                fontSize: "16px",
-                fontWeight: "600",
-                transition: "background-color 0.2s ease, transform 0.1s ease",
-              }}
+              className="login-submit"
             >
               Login
             </button>
           </form>
 
-          {error && (
-            <p style={{ color: "red", marginTop: "10px", fontWeight: "500" }}>
-              {error}
-            </p>
-          )}
+          {error && <p className="login-error">{error}</p>}
 
-          <p style={{ marginTop: "20px" }}>
+          <p className="login-register">
             Don’t have an account?{" "}
-            <a href="/register" style={{ color: "#5315ff" }}>
+            <Link to="/register">
               Register here
-            </a>
+            </Link>
           </p>
         </PageContainer>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

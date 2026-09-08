@@ -1,0 +1,367 @@
+.home-page {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-bottom: -2rem;
+  color: #172a3a;
+}
+
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* Hero */
+
+.home-hero {
+  position: relative;
+  padding: 88px 24px;
+  background: linear-gradient(135deg, #0d2338, #14304a 55%, #16705c);
+  text-align: center;
+}
+
+.home-hero-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.home-hero-title {
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.home-hero-subtitle {
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.home-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Buttons */
+
+.home-btn {
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 10px 18px;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.1s ease, border-color 0.2s ease;
+}
+
+.home-btn:active {
+  transform: translateY(1px);
+}
+
+.home-btn-large {
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+
+.home-btn-primary {
+  background: #16705c;
+  color: #fff;
+}
+
+.home-btn-primary:hover {
+  background: #105744;
+  box-shadow: 0 8px 18px rgba(16, 87, 68, 0.3);
+}
+
+.home-btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.home-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.home-btn-outline-dark {
+  background: transparent;
+  color: #14304a;
+  border: 1px solid #ccd5db;
+}
+
+.home-btn-outline-dark:hover {
+  background: #f3f5f7;
+  border-color: #14304a;
+}
+
+/* Section shells */
+
+.home-section-title {
+  margin: 0 0 12px;
+  color: #14273a;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.home-section-subtitle {
+  margin: 0 auto 48px;
+  max-width: 560px;
+  color: #5c6b76;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Differentiators */
+
+.home-differentiators {
+  padding: 72px 0;
+  background: #f7f9fa;
+}
+
+.home-diff-card,
+.home-pricing-card {
+  scroll-margin-top: 96px;
+}
+
+.home-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.home-diff-card {
+  background: #fff;
+  border: 1px solid rgba(23, 48, 68, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 28px 28px 24px;
+}
+
+.home-diff-card h3 {
+  margin: 0 0 14px;
+  color: #14273a;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.home-diff-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-diff-card li {
+  position: relative;
+  padding-left: 24px;
+  color: #45535d;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.home-diff-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #16705c;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.home-tenant-callout {
+  margin-top: 24px;
+  padding: 28px 32px;
+  border-radius: 10px;
+  background: #14304a;
+}
+
+.home-tenant-callout h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.home-tenant-callout ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-tenant-callout li {
+  position: relative;
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.home-tenant-callout li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5fd7bd;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* Pricing */
+
+.home-pricing {
+  padding: 72px 0 88px;
+  background: #fff;
+}
+
+.home-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.home-pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid rgba(23, 48, 68, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 28px 24px;
+}
+
+.home-pricing-card-highlighted {
+  border-color: #16705c;
+  box-shadow: 0 12px 28px rgba(16, 112, 92, 0.18);
+}
+
+.home-pricing-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #16705c;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.home-pricing-card h3 {
+  margin: 4px 0 0;
+  color: #14273a;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.home-pricing-price {
+  margin: 8px 0 0;
+  color: #14273a;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.home-pricing-price span {
+  color: #97a3ab;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.home-pricing-cap {
+  margin: 0 0 20px;
+  color: #5c6b76;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.home-pricing-card .home-btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Footer */
+
+.home-footer {
+  padding: 24px;
+  border-top: 1px solid #e7ebee;
+  color: #97a3ab;
+  font-size: 0.85rem;
+  text-align: center;
+  background: #fff;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .home-pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .home-diff-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    padding: 56px 16px;
+  }
+
+  .home-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-hero-actions .home-btn {
+    width: 100%;
+  }
+
+  .home-differentiators,
+  .home-pricing {
+    padding: 48px 0;
+  }
+
+  .home-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-btn,
+  .home-diff-card,
+  .home-pricing-card {
+    transition: none;
+  }
+}

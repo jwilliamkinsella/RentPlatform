@@ -5,6 +5,13 @@
   --border-radius: 8px;
 }
 
+html {
+  /* Full-bleed sections use the 100vw/-50vw break-out trick, which can
+     overshoot by a scrollbar's width; this keeps that from ever showing
+     as a horizontal scrollbar. */
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: var(--secondary-color);
